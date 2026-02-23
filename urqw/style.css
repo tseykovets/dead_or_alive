@@ -1,0 +1,19 @@
+/**
+ * This file is part of the Dead or Alive game.
+ * Copyright (C) 2026 Nikita Tseykovets (tseikovets@rambler.ru)
+ */
+
+#game h1,
+#game h2,
+#game .bold_centered {
+	text-align: center;
+	font-weight: bold;
+}
+
+#game h1 {
+	font-size: 2em;
+}
+
+#game h2 {
+	font-size: 1.2em;
+}

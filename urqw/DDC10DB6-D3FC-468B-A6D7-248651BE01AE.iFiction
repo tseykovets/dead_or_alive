@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+	<story>
+		<identification>
+			<ifid>DDC10DB6-D3FC-468B-A6D7-248651BE01AE</ifid>
+			<format>urqw</format>
+		</identification>
+		<bibliographic>
+			<title>Живым или мёртвым</title>
+			<author>Пётр Косых и Никита Цейковец</author>
+			<language>ru</language>
+			<headline>Очень короткая игра-загадка.</headline>
+			<firstpublished>2026-02-23</firstpublished>
+			<genre>Вестерн</genre>
+			<group>URQ</group>
+			<description>Итак, я добрался до Тумстона, этого проклятого городка Аризоны. Сойдя на станции, я сразу же направился в сторону салуна, который находился неподалёку.<br/>Мне пришлось отдать бармену все деньги, что у меня были, и он сказал мне, что комната Джимми находится в конце коридора слева. Он даже не посмотрел на объявление о розыске — похоже, Джимми успел прославиться и здесь…<br/>Я поднялся на второй этаж и достал свой кольт.<br/>Игра Петра Косых 2011 года, портированная Никитой Цейковцом с INSTEAD на UrqW.</description>
+		</bibliographic>
+		<contacts>
+			<url>https://urqw.github.io/UrqW/?id=dead_or_alive</url>
+			<authoremail>tseikovets@rambler.ru</authoremail>
+		</contacts>
+		<colophon>
+			<generator>UrqW Game Template</generator>
+			<originated>2026-02-23</originated>
+		</colophon>
+	</story>
+</ifindex>

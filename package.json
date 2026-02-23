@@ -1,0 +1,42 @@
+{
+  "name": "dead_or_alive",
+  "version": "1.0.0",
+  "description": "Game \"Живым или Мёртвым\" for UrqW text-based game engine.",
+  "main": "node_modules/urqw/index.html?id=urqw&debug=1",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "docs": "node scripts/docs.js",
+    "extract": "node scripts/extract.js",
+    "ifiction": "node scripts/ifiction.js",
+    "manifest": "node scripts/manifest.js",
+    "release": "node scripts/release.js",
+    "postinstall": "cd node_modules/urqw && npm install && npm run gen-docs",
+    "start": "npx live-server --open=node_modules/urqw/index.html?debug=1#urqw --watch=node_modules/urqw/quests/urqw.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tseykovets/dead_or_alive.git"
+  },
+  "keywords": [
+    "interactive-fiction",
+    "text-based-game-engine",
+    "text-adventure-engine",
+    "urq",
+    "urqw"
+  ],
+  "author": "Nikita Tseykovets <tseikovets@rambler.ru>",
+  "bugs": {
+    "url": "https://github.com/tseykovets/dead_or_alive/issues"
+  },
+  "homepage": "https://github.com/tseykovets/dead_or_alive#readme",
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "iconv-lite": "^0.7.0",
+    "live-server": "^1.2.2",
+    "open": "^10.2.0",
+    "urqw": "github:urqw/UrqW",
+    "uuid": "^11.1.0",
+    "xmldom": "^0.6.0"
+  }
+}
