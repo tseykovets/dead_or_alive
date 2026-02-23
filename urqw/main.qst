@@ -35,7 +35,7 @@ pln #/$[[Дальше|saloon2]]
 end
 
 :demon
-if tm = 45 then end
+if tm > 45 then end
 sec_new = (date*86400 + time) - (start_date*86400 + start_time)
 if sec_new > sec_old then sec_old = sec_new else pause 500 & goto demon
 tm = tm + 1
