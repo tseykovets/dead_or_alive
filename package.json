@@ -11,7 +11,7 @@
     "manifest": "node scripts/manifest.js",
     "release": "node scripts/release.js",
     "postinstall": "node scripts/clean.js && git clone --depth 1 https://github.com/urqw/UrqW.git engine && cd engine && npm install && npm run gen-docs",
-    "start": "npx live-server --open=engine/index-dev.html?debug=1#urqw --watch=engine/quests/urqw.zip",
+    "start": "npx live-server --open=engine/index-dev.html?debug=1#urqw --watch=engine/games/urqw.zip",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
