@@ -1,18 +1,6 @@
 /**
- * This file is part of the Dead or Alive game.
- * Copyright (C) 2026 Nikita Tseykovets <tseikovets@rambler.ru>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
-
-// Hide unnecessary UI elements
-$('#save').off('click').hide();
-$('#load').hide();
-$('.navbar-right').hide();
-
-
-/**
  * Typography - plugin for UrqW <https://github.com/urqw/typography>
- * Copyright (C) 2025 Nikita Tseykovets <tseikovets@rambler.ru>
+ * Copyright (C) 2025, 2026 Nikita Tseykovets <tseikovets@rambler.ru>
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
@@ -25,20 +13,23 @@ const drawButtonsOriginal = Client.prototype.drawButtons;
 // Override original functions
 
 Player.prototype.print = function(text, br) {
-	text = typography(text);
+	text = functions.typography(text);
 	return printOriginal.call(this, text, br);
 }
 
 Client.prototype.drawButtons = function() {
 	GlobalPlayer.buttons.forEach(button => {
-		button.desc = typography(button.desc);
+		button.desc = functions.typography(button.desc);
 	});
 	return drawButtonsOriginal.call(this);
 };
 
-// Typographic transformation function
-window.typography = function(text, lang = '') {
-	if (Game.getVar('urqw_typography_off') > 0) return text;
+// Returns text with typographic transformations.
+functions.typography = function(text, lang = '') {
+	if (arguments.length < 1 || arguments.length > 2) {
+		throw new Error('The typography() function takes 1 or 2 arguments.');
+	}
+	if (Game.getVar('urqw_typography_off')) return text;
 
 	if (!lang) {
 		const urqwTypographyLang = Game.getVar('urqw_typography_lang');

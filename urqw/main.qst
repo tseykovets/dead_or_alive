@@ -6,6 +6,9 @@ Copyright (C) 2026 Nikita Tseykovets <tseikovets@rambler.ru>
 */
 
 :start
+UIHide("save", true)
+UIHide("load", true)
+UIHide("inv", true)
 pln <h1>Живым или мёртвым</h1>
 pln <div class="bold_centered">© 2011 Пётр Косых</div>
 pln #/$#/$
@@ -77,7 +80,7 @@ end
 
 :start_game
 start_timestamp = Date()
-JavaScript("$('.navbar-right').show();")
+UIHide("inv", false)
 end
 
 :door_осмотреть
@@ -147,7 +150,7 @@ goto #location$
 
 :badend
 play snd/shoot.ogg
-JavaScript("$('.navbar-right').hide();")
+UIHide("inv", true)
 pln <h2>Конец</h2>
 image img/bullets.png|Пули
 pln Держа кольт наготове, я толкнул дверь вперёд... В следующий момент три пули 44 калибра пробили дерево, вырвав из него мелкие щепки.
@@ -157,7 +160,7 @@ end
 
 :goodend
 music = "mus/western.ogg"
-JavaScript("$('.navbar-right').hide();")
+UIHide("inv", true)
 pln <h2>Конец</h2>
 image img/colt.png|Револьвер
 pln Держа кольт наготове, я толкнул дверь вперёд... Мне повезло, я застал Джимми врасплох. Спустя несколько минут, я уже спускался по лестнице в бар. Меня всё ещё била мелкая дрожь, когда бармен по имени Ричард наливал мне виски.
